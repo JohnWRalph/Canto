@@ -9,16 +9,13 @@
         characterPosition,
         character2Position,
     } from "../store/spritePosition";
-    import { flip } from "svelte/animate";
-    // import spriteDirection from "../store/spriteDirection"
-    // import changeSpriteDirection from "../utils/changeSpriteDirection";
+    // import { flip } from "svelte/animate";
     import Sprite from "./Sprite.svelte";
     import SpriteAI from "./SpriteAI.svelte";
-    //    import {fade,fly} from
+ 
     let x = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
     let y = [1, 2, 3, 4, 5];
 
-    let animationDirection;
     function onKeyDown(e) {
         console.log(e);
         switch (e.keyCode) {
@@ -168,23 +165,6 @@
         console.log(Number($spriteDirection));
     }
 
-    const [send, receive] = crossfade({
-        duration: (d) => Math.sqrt(d * 200),
-
-        fallback(node, params) {
-            const style = getComputedStyle(node);
-            const transform = style.transform === "none" ? "" : style.transform;
-
-            return {
-                duration: 600,
-                easing: quintOut,
-                css: (t) => `
-					transform: ${transform} scale(${t});
-					opacity: ${t}
-				`,
-            };
-        },
-    });
 </script>
 
 <div id="Gameboard">
