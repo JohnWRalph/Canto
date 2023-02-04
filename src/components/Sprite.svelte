@@ -1,9 +1,6 @@
 <script lang='ts'>
     import {spriteDirection} from "../store/spritedirection";
 
- 
-
- 
 </script>
 
 <img class="{$spriteDirection}" src="https://i.imgur.com/Z7yUuOx.png" alt="">
