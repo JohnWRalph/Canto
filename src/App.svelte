@@ -171,17 +171,21 @@ function player2Left(){
 <style>
   #info {
     color: white;
+    
   }
   .P1MovementButton {
     background-color: green;
-    margin: 20px;
+    margin: 5px;
+    margin-top: -5%;
   }
   .P2MovementButton {
     background-color: brown;
-    margin: 20px;
+    margin: 5px;
+    margin-top: -5%;
   }
 
   #controls{
+    height: 10%;
     display:flex;
     justify-content: center;
     justify-content: space-around;
