@@ -8,16 +8,19 @@
     import {
         characterPosition,
         character2Position,
+        hoodiePosition,
     } from "../store/spritePosition";
     // import { flip } from "svelte/animate";
     import Sprite from "./Sprite.svelte";
     import SpriteAI from "./SpriteAI.svelte";
+    import Hoodie from "./Hoodie.svelte";
  
     let x = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
     let y = [1, 2, 3, 4, 5];
 
     function onKeyDown(e) {
-        console.log(e);
+        console.log("e",e);
+        
         switch (e.keyCode) {
             case 37:
                 if ($characterPosition[0] === 1) {
@@ -188,6 +191,14 @@
                         >
                             <SpriteAI />
                         </div>
+                        <!-- {:else if row === $hoodiePosition[0] && column === $hoodiePosition[1]}
+                        <div
+                            out:fly={{ x: 20, y: -10, duration: 50 }}
+                            in:fly={{ x: 20, y: -30, duration: 100 }}
+                            class="characterSpace"
+                        >
+                            <Hoodie />
+                        </div> -->
                     {:else}
                         <div />
                     {/if}
